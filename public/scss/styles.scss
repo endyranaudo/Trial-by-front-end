@@ -1,5 +1,7 @@
 @import 'vars';
    
+// GENERAL
+
 body {
     font-family: $body-font;
     margin: 0;
@@ -59,9 +61,9 @@ nav {
     margin-bottom: 50px;
 }
 
-
-.city {
-    text-align: center;
+.filter {
+    background-color: $blue;
+    background-blend-mode: overlay;
 }
 
 // #### SMALL ####
@@ -85,7 +87,6 @@ nav {
     height: 15px;
     margin: 10px 0;
 }
-
 
 // SECTION HEADER
 
@@ -139,6 +140,7 @@ header {
 // ARTICLE CITY
 
 .city {
+    text-align: center; 
     .city-card{
     margin-bottom: 8px;
     };  
@@ -197,32 +199,59 @@ header {
 
 // SECTION BOTTOM MENU
 
-.container-menu {
-    margin: 0 2.5rem;
-}
+// .container-menu {
+//     margin: 0 2.5rem;
+// }
 
 .menu-bottom {
     background-color: $blue;
     color: #fff;
 
+    .row {
+        display: flex;
+        margin-bottom: 15px;
+    };
     .col-one {
+        flex: 6;
         ul {
             text-decoration: none;
             margin: 0;
-            padding: 20px;
+            padding: 20px 0 0 0;
         };
         li {
             list-style-type: none;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             margin-bottom: 10px;
         }
 
     };
     .col-two {
+        flex: 1;
+        flex-direction: column;
+        display: block;
+        padding: 20px 0 0 0;
+
         img {
-            height: 50px;
-            display: block;
+            height: 35px;
             margin-bottom: 10px;
+            position: right;
         }
+    };
+    .subscribe {
+        text-align: center;
+        p {
+            margin: 0;
+            text-align: left;
+            font-size: 0.8rem
+        }
+        button {
+            background: $green;
+            color: #fff;
+            margin: 2px;
+            padding: 6px 20px;
+            border-radius: 25px;
+            border: none;
+            };
+
     }
 }

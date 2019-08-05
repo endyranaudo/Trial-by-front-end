@@ -68,8 +68,9 @@ nav {
   margin-bottom: 50px;
 }
 
-.city {
-  text-align: center;
+.filter {
+  background-color: #3E6990;
+  background-blend-mode: overlay;
 }
 
 .container {
@@ -135,6 +136,10 @@ header button {
   top: -12px;
 }
 
+.city {
+  text-align: center;
+}
+
 .city .city-card {
   margin-bottom: 8px;
 }
@@ -193,30 +198,70 @@ header button {
   border: none;
 }
 
-.container-menu {
-  margin: 0 2.5rem;
-}
-
 .menu-bottom {
   background-color: #3E6990;
   color: #fff;
 }
 
+.menu-bottom .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.menu-bottom .col-one {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+}
+
 .menu-bottom .col-one ul {
   text-decoration: none;
   margin: 0;
-  padding: 20px;
+  padding: 20px 0 0 0;
 }
 
 .menu-bottom .col-one li {
   list-style-type: none;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-bottom: 10px;
 }
 
-.menu-bottom .col-two img {
-  height: 50px;
+.menu-bottom .col-two {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: block;
+  padding: 20px 0 0 0;
+}
+
+.menu-bottom .col-two img {
+  height: 35px;
   margin-bottom: 10px;
+  position: right;
+}
+
+.menu-bottom .subscribe {
+  text-align: center;
+}
+
+.menu-bottom .subscribe p {
+  margin: 0;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.menu-bottom .subscribe button {
+  background: #8AA460;
+  color: #fff;
+  margin: 2px;
+  padding: 6px 20px;
+  border-radius: 25px;
+  border: none;
 }
 /*# sourceMappingURL=styles.css.map */
