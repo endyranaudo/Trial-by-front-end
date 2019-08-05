@@ -61,32 +61,35 @@ nav {
     margin-bottom: 50px;
 }
 
-.filter {
-    background-color: $blue;
-    background-blend-mode: overlay;
-}
-
-// #### SMALL ####
-// NAVBAR
-
 .container {
     margin: 0 4rem;
 }
 
-.logo {
-    height: 20px;
-    margin: 10px 0;
+
+// #### SMALL ####
+// NAVBAR
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .logo {
+        height: 20px;
+        margin: 10px;
+        margin-right: auto;
+    }
+    
+    .lens {
+        height: 15px;
+        margin: 10px 20px 10px 0;
+    }
+    
+    .hamburger {
+        height: 15px;
+        margin: 10px 0;
+    }
 }
 
-.lens {
-    height: 15px;
-    margin: 10px 0;
-}
-
-.hamburger {
-    height: 15px;
-    margin: 10px 0;
-}
 
 // SECTION HEADER
 
@@ -122,17 +125,16 @@ header {
     font-size: 0.8rem;
     text-align: center;
     margin: 20px 0;
-    padding: 20px 0;
+    padding: 10px 0;
     color: $blue;
-    // position: absolute;
     position: relative;
     img {
         height: 30px;
-        // margin: auto;
         text-align: center;
-        // position: relative;
         position: absolute;
         top: -12px;
+        left: 50%;
+        margin-left: -20px;
     }
 }
 
@@ -141,11 +143,12 @@ header {
 
 .city {
     text-align: center; 
+    
     .city-card{
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     };  
     .city-pic {
-        height: 180px;
+        height: 160px;
         border-top: $blue solid 2px;
         border-bottom: $blue solid 2px;
         background-color: $blue;
@@ -206,7 +209,10 @@ header {
 .menu-bottom {
     background-color: $blue;
     color: #fff;
-
+    background-image: url("../images/small/bg-blue-sm.png");
+    background-position: bottom;
+    background-repeat: none;
+    background-size: cover;
     .row {
         display: flex;
         margin-bottom: 15px;
@@ -240,18 +246,70 @@ header {
     .subscribe {
         text-align: center;
         p {
-            margin: 0;
+            margin: 0 0 5px 0;
             text-align: left;
             font-size: 0.8rem
         }
-        button {
-            background: $green;
-            color: #fff;
-            margin: 2px;
-            padding: 6px 20px;
+        .signup {
+            padding-bottom: 50px;
+        }
+        input[type="email"] {
+            width: 187px;
+            height: 30px;
+            padding-right: 2rem;
+            padding-left: 2em;
             border-radius: 25px;
             border: none;
-            };
+            color: $text;
+        }
+        
+        input[type="submit"] {
+            margin-left: -76px;
+            height: 30px;
+            width: 70px;
+            padding: 5px 10px 5px 10px;
+            background: $green;
+            color: #fff;
+            border-radius: 25px;
+            border: none;
+            -webkit-appearance: none;
+            font-weight: bold;
+        }
+        ::placeholder {
+            color: grayscale($color: #cecece);
+        }
 
     }
 }
+
+footer {
+    background-color: $blue-dark;
+    text-align: center;
+    color: $grey-light;
+    position: relative;
+    img {
+        height: 40px;
+        position: -20;
+        position: absolute;
+        left: 50%;
+        margin-left: -20px;
+        top: -20px;
+    }
+    .footer-content {
+        padding: 30px 0 10px 0;;
+    }
+    .copyrights {
+        margin: 0;
+        font-size: 0.6rem;
+    }
+    .award {
+        font-size: 0.6rem; 
+        margin-top: 10px;
+        text-decoration-line: underline;
+    }
+}
+
+
+// .main-container {
+    
+// }
