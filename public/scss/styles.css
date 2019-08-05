@@ -1,0 +1,222 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather", serif;
+  margin: 0;
+}
+
+nav {
+  background-color: #3E6990;
+}
+
+.card {
+  text-align: center;
+  margin: 0 0.5rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #737373;
+}
+
+.card .icons {
+  margin-top: 20px;
+  height: 40px;
+}
+
+.card .read-more {
+  color: #F39B6D;
+}
+
+.card .hr-sect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #8d8d8d;
+  margin: 8px 0px;
+}
+
+.card .hr-sect::before,
+.card .hr-sect::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: #737373;
+  height: 0.8px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 25px 0px 10px;
+}
+
+.card .hr-sect::before {
+  margin: 0px 10px 0px 25px;
+}
+
+.cards {
+  margin-bottom: 50px;
+}
+
+.city {
+  text-align: center;
+}
+
+.container {
+  margin: 0 4rem;
+}
+
+.logo {
+  height: 20px;
+  margin: 10px 0;
+}
+
+.lens {
+  height: 15px;
+  margin: 10px 0;
+}
+
+.hamburger {
+  height: 15px;
+  margin: 10px 0;
+}
+
+header {
+  background-image: url("../images/small/banner-sm.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  background-color: #3E6990;
+  background-blend-mode: overlay;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+}
+
+header h3 {
+  padding-top: 30px;
+}
+
+header button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F39a65), to(#ef7538));
+  background-image: linear-gradient(#F39a65, #ef7538);
+  color: #fff;
+  margin: 15px;
+  padding: 10px 40px;
+  border-radius: 25px;
+  border: none;
+}
+
+.quote {
+  background-color: #F0F0F0;
+  font-family: "Merriweather", serif;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px 0;
+  color: #3E6990;
+  position: relative;
+}
+
+.quote img {
+  height: 30px;
+  text-align: center;
+  position: absolute;
+  top: -12px;
+}
+
+.city .city-card {
+  margin-bottom: 8px;
+}
+
+.city .city-pic {
+  height: 180px;
+  border-top: #3E6990 solid 2px;
+  border-bottom: #3E6990 solid 2px;
+  background-color: #3E6990;
+  background-blend-mode: overlay;
+}
+
+.city .date {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #8AA460;
+  font-size: 0.7rem;
+}
+
+.city .city-description {
+  margin: 0;
+  color: #737373;
+  font-weight: lighter;
+}
+
+.city button {
+  background: #fff;
+  color: #3E6990;
+  margin: 2px;
+  padding: 10px 40px;
+  border-radius: 25px;
+  border: 1px solid #3E6990;
+}
+
+.get-in-touch {
+  text-align: center;
+  padding: 50px 0 30px 0;
+  background-image: url("../images/small/bg-green-sm.png");
+  background-position: bottom;
+  background-repeat: none;
+  background-size: cover;
+}
+
+.get-in-touch p {
+  color: #3E6990;
+  font-size: 1.1rem;
+}
+
+.get-in-touch button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F39a65), to(#ef7538));
+  background-image: linear-gradient(#F39a65, #ef7538);
+  color: #fff;
+  margin: auto;
+  padding: 10px 40px;
+  border-radius: 25px;
+  border: none;
+}
+
+.container-menu {
+  margin: 0 2.5rem;
+}
+
+.menu-bottom {
+  background-color: #3E6990;
+  color: #fff;
+}
+
+.menu-bottom .col-one ul {
+  text-decoration: none;
+  margin: 0;
+  padding: 20px;
+}
+
+.menu-bottom .col-one li {
+  list-style-type: none;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.menu-bottom .col-two img {
+  height: 50px;
+  display: block;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
