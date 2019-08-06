@@ -1,11 +1,29 @@
 @import 'vars';
+
+// MIXINS MEDIA QUERY
+
+$iPad: 768px;
+
+@mixin iPad {
+    @media (min-width: #{$iPad}) {
+        @content;
+    }
+}
+
+$desktop: 1224px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
    
 // GENERAL
 
 body {
     font-family: $body-font;
     margin: 0;
-};
+}
 
 img {
     margin: 0;
@@ -21,9 +39,101 @@ nav {
    background-color: $blue;
 }
 
-.card {
+.container {
+    margin: 0 4rem;
+
+    @include iPad {
+        margin: 0 6rem;
+    }
+}
+
+// #### SMALL ####
+// NAVBAR
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .logo {
+        height: 20px;
+        margin: 10px;
+        margin-right: auto;
+    }
+    
+    .lens {
+        height: 15px;
+        margin: 10px 20px 10px 0;
+    }
+    
+    .hamburger {
+        height: 15px;
+        margin: 10px 0;
+    }
+
+    @include iPad {
+        .container {
+            margin: 0 6rem;
+        }
+
+        .lens {
+            visibility: hidden;
+        }
+        
+        .hamburger {
+            visibility: hidden;
+        }
+    }
+}
+
+
+// SECTION HEADER
+
+header {
+    background-image: url("../images/small/banner-sm.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    background-color: $blue;
+    background-blend-mode: overlay;
     text-align: center;
-    // border: red solid 1px;
+    margin: 0;
+    color: #fff;
+    h3 {
+        padding-top: 30px;
+    };
+    button {
+        background-image: linear-gradient(#F39a65, #ef7538);
+        color: #fff;
+        margin: 15px;
+        padding: 10px 40px;
+        border-radius: 25px;
+        border: none;
+    }
+
+    @include iPad {
+        background-image: url("../images/medium/banner-md.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 320px;
+        background-size: cover;
+        h3 {
+            padding-top: 60px;
+            font-size: 2rem;
+        };
+        button {
+            background-image: linear-gradient(#F39a65, #ef7538);
+            color: #fff;
+            margin: 15px;
+            padding: 10px 40px;
+            border-radius: 25px;
+            border: none;
+        }
+    }
+}
+// SECTION CARDS
+
+.cards {
+    text-align: center;
     margin: 0 0.5rem;
     font-weight: 300;
     font-size: 0.8rem;
@@ -55,67 +165,32 @@ nav {
     .hr-sect::before {
         margin: 0px 10px 0px 25px;
     }
-}
 
-.cards {
-    margin-bottom: 50px;
-}
+    @include iPad {
+        // display: flex;
+        margin: 0 3rem;;
+        .row-one {
+            display: flex;
+            .col-one {
+                flex: 1;
+            }
+            .col-two {
+                flex: 1;
+            }
+        }
+        .row-two {
+            display: flex;
+        }
+        .col-three {
+            flex: 1;
+        }
+        .col-four {
+            flex: 1;
+        }
 
-.container {
-    margin: 0 4rem;
-}
 
-
-// #### SMALL ####
-// NAVBAR
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .logo {
-        height: 20px;
-        margin: 10px;
-        margin-right: auto;
-    }
-    
-    .lens {
-        height: 15px;
-        margin: 10px 20px 10px 0;
-    }
-    
-    .hamburger {
-        height: 15px;
-        margin: 10px 0;
     }
 }
-
-
-// SECTION HEADER
-
-header {
-    background-image: url("../images/small/banner-sm.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 180px;
-    background-color: $blue;
-    background-blend-mode: overlay;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    h3 {
-        padding-top: 30px;
-    };
-    button {
-        background-image: linear-gradient(#F39a65, #ef7538);
-        color: #fff;
-        margin: 15px;
-        padding: 10px 40px;
-        border-radius: 25px;
-        border: none;
-    }
-}
-
 
 // SECTION QUOTE
 
@@ -136,6 +211,9 @@ header {
         left: 50%;
         margin-left: -20px;
     }
+    @include iPad {
+
+    }
 }
 
 
@@ -143,7 +221,6 @@ header {
 
 .city {
     text-align: center; 
-    
     .city-card{
     margin-bottom: 10px;
     };  
@@ -202,10 +279,6 @@ header {
 
 // SECTION BOTTOM MENU
 
-// .container-menu {
-//     margin: 0 2.5rem;
-// }
-
 .menu-bottom {
     background-color: $blue;
     color: #fff;
@@ -230,17 +303,27 @@ header {
             margin-bottom: 10px;
         }
 
+        @include iPad {
+            flex: 5;
+        }
+
     };
     .col-two {
         flex: 1;
         flex-direction: column;
         display: block;
         padding: 20px 0 0 0;
+        text-align: right;
 
         img {
             height: 35px;
-            margin-bottom: 10px;
-            position: right;
+            margin-left: 10px;
+        }
+        @include iPad {
+            flex: 5;
+            img {
+                display: inline-flex;
+            }
         }
     };
     .subscribe {
@@ -252,6 +335,7 @@ header {
         }
         .signup {
             padding-bottom: 50px;
+            text-align: left;
         }
         input[type="email"] {
             width: 187px;
@@ -282,6 +366,8 @@ header {
     }
 }
 
+
+// SECTION FOOTER
 footer {
     background-color: $blue-dark;
     text-align: center;
@@ -307,9 +393,18 @@ footer {
         margin-top: 10px;
         text-decoration-line: underline;
     }
+
+    @include iPad {
+        .footer-content{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        }
+        
+        .copyrights {
+            margin-right: auto;
+        }
+
+    }
 }
-
-
-// .main-container {
-    
-// }
