@@ -1,6 +1,5 @@
 @import 'vars';
 
-
 // MIXINS - MEDIA QUERY
 
 @mixin medium {
@@ -37,9 +36,91 @@ nav {
    background-color: $blue;
 }
 
+.container {
+    margin: 0 4rem;
+
+    @include medium {
+        margin: 0 6rem;
+    }
+}
+
+// NAVBAR
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .logo {
+        height: 20px;
+        margin: 10px;
+        margin-right: auto;
+    }
+    
+    .lens {
+        height: 15px;
+        margin: 10px 20px 10px 0;
+        @include medium {
+            visibility: hidden;
+        }
+    }
+    
+    .hamburger {
+        height: 15px;
+        margin: 10px 0;
+        @include medium {
+            visibility: hidden;
+        }
+    }
+}
+
+
+// SECTION HEADER
+
+header {
+    background-image: url("../images/small/banner-sm.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    background-color: $blue;
+    background-blend-mode: overlay;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    @include medium {
+        background-image: url("../images/medium/banner-md.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 250px;
+        background-color: $blue;
+        background-blend-mode: overlay;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        }
+
+    h3 {
+        padding-top: 30px;
+        @include medium {
+            font-size: 1.6rem;
+            padding-top: 5.5rem;
+        }
+    };
+    button {
+        background-image: linear-gradient(#F39a65, #ef7538);
+        color: #fff;
+        margin: 15px;
+        padding: 10px 40px;
+        border-radius: 25px;
+        border: none;
+    }
+}
+
+
+// SECTION CARD
+
 .card {
     text-align: center;
-    // border: red solid 1px;
     margin: 0 0.5rem;
     font-weight: 300;
     font-size: 0.8rem;
@@ -75,61 +156,6 @@ nav {
 
 .cards {
     margin-bottom: 50px;
-}
-
-.container {
-    margin: 0 4rem;
-}
-
-
-// #### SMALL ####
-// NAVBAR
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .logo {
-        height: 20px;
-        margin: 10px;
-        margin-right: auto;
-    }
-    
-    .lens {
-        height: 15px;
-        margin: 10px 20px 10px 0;
-    }
-    
-    .hamburger {
-        height: 15px;
-        margin: 10px 0;
-    }
-}
-
-
-// SECTION HEADER
-
-header {
-    background-image: url("../images/small/banner-sm.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 180px;
-    background-color: $blue;
-    background-blend-mode: overlay;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    h3 {
-        padding-top: 30px;
-    };
-    button {
-        background-image: linear-gradient(#F39a65, #ef7538);
-        color: #fff;
-        margin: 15px;
-        padding: 10px 40px;
-        border-radius: 25px;
-        border: none;
-    }
 }
 
 

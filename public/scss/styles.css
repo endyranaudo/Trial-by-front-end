@@ -17,6 +17,103 @@ nav {
   background-color: #3E6990;
 }
 
+.container {
+  margin: 0 4rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0 6rem;
+  }
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar .logo {
+  height: 20px;
+  margin: 10px;
+  margin-right: auto;
+}
+
+.navbar .lens {
+  height: 15px;
+  margin: 10px 20px 10px 0;
+}
+
+@media (min-width: 768px) {
+  .navbar .lens {
+    visibility: hidden;
+  }
+}
+
+.navbar .hamburger {
+  height: 15px;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .navbar .hamburger {
+    visibility: hidden;
+  }
+}
+
+header {
+  background-image: url("../images/small/banner-sm.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 180px;
+  background-color: #3E6990;
+  background-blend-mode: overlay;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  header {
+    background-image: url("../images/medium/banner-md.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    background-color: #3E6990;
+    background-blend-mode: overlay;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+  }
+}
+
+header h3 {
+  padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+  header h3 {
+    font-size: 1.6rem;
+    padding-top: 5.5rem;
+  }
+}
+
+header button {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F39a65), to(#ef7538));
+  background-image: linear-gradient(#F39a65, #ef7538);
+  color: #fff;
+  margin: 15px;
+  padding: 10px 40px;
+  border-radius: 25px;
+  border: none;
+}
+
 .card {
   text-align: center;
   margin: 0 0.5rem;
@@ -66,64 +163,6 @@ nav {
 
 .cards {
   margin-bottom: 50px;
-}
-
-.container {
-  margin: 0 4rem;
-}
-
-.navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.navbar .logo {
-  height: 20px;
-  margin: 10px;
-  margin-right: auto;
-}
-
-.navbar .lens {
-  height: 15px;
-  margin: 10px 20px 10px 0;
-}
-
-.navbar .hamburger {
-  height: 15px;
-  margin: 10px 0;
-}
-
-header {
-  background-image: url("../images/small/banner-sm.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 180px;
-  background-color: #3E6990;
-  background-blend-mode: overlay;
-  text-align: center;
-  margin: 0;
-  color: #fff;
-}
-
-header h3 {
-  padding-top: 30px;
-}
-
-header button {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#F39a65), to(#ef7538));
-  background-image: linear-gradient(#F39a65, #ef7538);
-  color: #fff;
-  margin: 15px;
-  padding: 10px 40px;
-  border-radius: 25px;
-  border: none;
 }
 
 .quote {
